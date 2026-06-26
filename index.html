@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pill Detection Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>💊 Pill Detection Dashboard</h1>
+        <p>Sistem Penghitungan Pil Obat Berbasis Raspberry Pi & YOLOv8</p>
+    </header>
+
+    <div class="container">
+
+        <div class="camera">
+
+            <h2>Live Detection</h2>
+
+            <div class="camera-box">
+                Camera Preview
+            </div>
+
+            <button onclick="startDetection()">Start Detection</button>
+
+        </div>
+
+        <div class="info">
+
+            <div class="card">
+                <h3>Total Pil</h3>
+                <h1 id="count">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Jenis Obat</h3>
+                <p id="medicine">Paracetamol</p>
+            </div>
+
+            <div class="card">
+                <h3>Target</h3>
+                <p id="target">30 Pil</p>
+            </div>
+
+            <div class="card">
+                <h3>Status</h3>
+                <p id="status">Waiting...</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="history">
+
+        <h2>Riwayat Deteksi</h2>
+
+        <table>
+
+            <tr>
+                <th>Waktu</th>
+                <th>Obat</th>
+                <th>Jumlah</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>09:30</td>
+                <td>Paracetamol</td>
+                <td>25</td>
+                <td>Kurang</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
